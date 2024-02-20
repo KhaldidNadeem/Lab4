@@ -1,0 +1,15 @@
+def sum_multiples_of_seven(n1, n2):
+   
+    // Calculates the sum of multiples of 7 between n1 and n2 (inclusive) using recursion.
+    // Base case: If the starting number is greater than the ending number, return 0
+    if n1 > n2:
+        return 0
+    
+    // Recursion: 
+    // If the starting number is a multiple of 7, add it to the sum and call the function again with the next number
+    if n1 % 7 == 0:
+        return n1 + sum_multiples_of_seven(n1+1, n2)
+    
+    // If the starting number is not a multiple of 7, skip it and call the function again with the next number
+    else:
+        return sum_multiples_of_seven(n1+1, n2)
