@@ -1,0 +1,21 @@
+def binary_search_recursive(arr, target, low, high):
+
+    // If low is greater than high, the target is not in the array
+    if low > high:
+        return -1
+    
+    // Calculate the middle index and value
+    mid = (low + high) // 2
+    mid_val = arr[mid]
+    
+    // If the middle value is the target, return its index
+    if mid_val == target:
+        return mid
+    
+    // If the middle value is greater than the target, search the left half of the array recursively
+    elif mid_val > target:
+        return binary_search_recursive(arr, target, low, mid-1)
+    
+    // If the middle value is less than the target, search the right half of the array recursively
+    else:
+        return binary_search_recursive(arr, target, mid+1, high)
