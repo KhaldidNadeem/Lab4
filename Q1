@@ -1,0 +1,19 @@
+def print_hello_world(n):
+    """
+    Prints "Hello World" n times using recursion.
+
+    Args:
+    n (int): Number of times to print "Hello World".
+
+    Returns:
+    None
+    """
+    # Base case: if n is 0, stop recursion
+    if n == 0:
+        return
+    
+    # Print "Hello World"
+    print("Hello World")
+    
+    # Recursive call with n-1
+    print_hello_world(n-1)
